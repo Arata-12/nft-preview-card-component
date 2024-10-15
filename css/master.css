@@ -1,0 +1,185 @@
+:root {
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line-: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --transition-main: 0.3s;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--Very-dark-blue-main-BG);
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+.box {
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  position: relative;
+}
+.box > img {
+  width: 300px;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  position: relative;
+  transition: var(--transition-main);
+  -webkit-transition: var(--transition-main);
+  -moz-transition: var(--transition-main);
+  -ms-transition: var(--transition-main);
+  -o-transition: var(--transition-main);
+}
+.box .view {
+  visibility: hidden;
+  width: 40px;
+  top: 25%;
+  left: 45%;
+  position: absolute;
+  cursor: pointer;
+  transition: var(--transition-main);
+  -webkit-transition: var(--transition-main);
+  -moz-transition: var(--transition-main);
+  -ms-transition: var(--transition-main);
+  -o-transition: var(--transition-main);
+}
+.box > img:hover + .view {
+  visibility: visible;
+  z-index: 44;
+}
+.bf {
+  position: absolute;
+  top: 30.5%;
+  left: 50%;
+  width: 88%;
+  height: 54%;
+  border-radius: 6px;
+  background-color: hsl(178deg 100% 50% / 37%);
+  transform: translate(-50%, -50%);
+  z-index: 43;
+  visibility: hidden;
+  transition: var(--transition-main);
+  -webkit-transition: var(--transition-main);
+  -moz-transition: var(--transition-main);
+  -ms-transition: var(--transition-main);
+  -o-transition: var(--transition-main);
+}
+.box > img:hover + .bf {
+  visibility: visible;
+  z-index: 6;
+}
+.box > h2 {
+  color: var(--White);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition-main);
+  -webkit-transition: var(--transition-main);
+  -moz-transition: var(--transition-main);
+  -ms-transition: var(--transition-main);
+  -o-transition: var(--transition-main);
+}
+.box > h2:hover {
+  color: var(--Cyan);
+}
+.box > p {
+  color: var(--Soft-blue);
+}
+.stat-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.stat-box > span {
+  color: var(--Cyan);
+}
+.eth {
+  display: flex;
+  flex-direction: row;
+}
+.eth p {
+  margin-left: 5px;
+}
+.box .time {
+  color: var(--Soft-blue);
+  margin-left: 115px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.box .time p {
+  margin-left: 5px;
+}
+.info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info-box img {
+  width: 40px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.info-box p {
+  color: var(--Soft-blue);
+  margin-left: 10px;
+}
+.info-box .colored {
+  color: var(--White);
+  transition: var(--transition-main);
+  -webkit-transition: var(--transition-main);
+  -moz-transition: var(--transition-main);
+  -ms-transition: var(--transition-main);
+  -o-transition: var(--transition-main);
+}
+.info-box .colored:hover {
+  color: var(--Cyan);
+}
+@media (max-width: 767px) {
+  .container {
+    margin: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Cyan);
+  margin-bottom: 5px;
+}
+.copyright img {
+  width: 20px;
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+}
